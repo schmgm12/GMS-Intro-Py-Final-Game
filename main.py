@@ -3,7 +3,6 @@ from random import randint
 import time
 import pandas as pd
 
-
 def game_choice():
     print('Which game do you want to play?:')
     print('A: Multiplication Challenge')
@@ -26,7 +25,7 @@ def get_high_score(game):
     else:
         data = pd.read_csv('addition_scores.csv', sep=",", header = 0)
         name = data.ix[0, 'Name']
-        score = data.iloc[0, 'Score']
+        score = data.ix[0, 'Score']
         message = 'The Addition Game high score is held by {} who solved {} problems'.format(name, score)
         return message, score
 
